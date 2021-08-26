@@ -1,6 +1,6 @@
 
 import { Redirect } from 'react-router';
-import React, { useState, useContext } from 'react';
+import { useState } from "react";
 // Connect to the context (i.e, global state)
 
 const RegistrationForm = () => {
@@ -28,7 +28,7 @@ const RegistrationForm = () => {
     let avatarInput;
     let termsAndConditionsCheckbox;   
 
-    const formData = new FormData();
+    let formData = new FormData();
     const attachFile=(evt)=>{
         //create array to attach multiple files
         const files=Array.from(evt.target.files);
@@ -73,12 +73,12 @@ const RegistrationForm = () => {
             setState("loading");
             setErrorsState([]);
             // 2.1 If the submission is successful, set state to "successful"
-            
-            formData.append('firstName', firstNameField.value);
+            console.log(lastNameField.value);
+            formData.append('firstName', "Abhi");
             formData.append('lastName', lastNameField.value);
             formData.append('email', emailField.value);
             formData.append('password', passwordField.value);
-            console.log(formData);
+           console.log(formData);
             fetch(
                 `${process.env.REACT_APP_BACKEND}/users/create`,
                 {

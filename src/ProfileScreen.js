@@ -1,11 +1,45 @@
 
-// 4 season 1 special card--- click here and detail about each episode--make boxes.. new page
 
-
+import CardCastSection from "./CardCastSection";
 import CommentSection from './CommentSection';
 import CardSection from './CardSection';
 import RecommendationSection from "./RecommendationSection";
-
+const castDetails=[{
+  image:"./sherlock_img.png",
+  text:"Benedict Cumberbatch (Sherlock)",
+  url:"https://en.wikipedia.org/wiki/Benedict_Cumberbatch"
+  },
+  {
+  image:"./johnwatson.png",
+  text:"Martin Freeman (Dr. John Watson)",
+  url:"https://en.wikipedia.org/wiki/Martin_Freeman"
+  },
+  {
+  image:"./microft.png",
+  text:"Mark Gatiss (Mycroft Holmes)",
+  url:"https://en.wikipedia.org/wiki/Mark_Gatiss"
+  },
+  {
+  image:"./moriaty.png",
+  text:"Andrew Scott (Jim Moriarty )",
+  url:"https://en.wikipedia.org/wiki/Andrew_Scott_(actor)"
+  },
+  {
+  image:"./mrshutson.png",
+  text:"Una Stubbs (Mrs. Hudson )",
+  url:"https://en.wikipedia.org/wiki/Una_Stubbs"
+  },
+  {
+  image:"./johnwife.png",
+  text:"Amanda Abbington (Mary) ",
+  url:""
+  },
+  {
+  image:"./molly.png",
+  text:"	Louise Brealey (Molly Hooper)",
+  url:"https://en.wikipedia.org/wiki/Amanda_Abbington"
+  }
+];
 
 const recommendData=[
     {
@@ -109,6 +143,12 @@ Although the series depicts a variety of crimes and perpetrators, Holmes's confl
   </div>
 
 </div>
+<br/><br/>
+<div>
+      <CardCastSection content={castDetails}/>
+      
+</div>
+<br/><br/>
 
         
        </div>

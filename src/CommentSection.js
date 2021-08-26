@@ -63,6 +63,7 @@ function CommentSection(){
             <div className="col-md">
                 <div className="form-floating">
                 <select ref={(element)=>{ selectedSeasonField =  element}} className="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                <option selected >Select</option>
                     <option selected value="Season 1- Episode 1">Season 1- Episode 1</option>
                     <option value="Season 1- Episode 2">Season 1- Episode 2</option>
                     <option value="Season 1- Episode 3">Season 1- Episode 3</option>
