@@ -17,7 +17,7 @@ function MediaSection(props) {
                             <div>                                
                                 <div className={"row " + rowOrder}>
                                     <div className="col-12 col-lg-7">
-                                        <h3 className="display-4 mt-5">{element.title}</h3>
+                                        <p className="display-6 mt-5">{element.title}</p>
                                         <p>{element.description}</p>
                                     </div>
                                     <div className="col-12 col-lg-5">

@@ -37,9 +37,6 @@ const RegistrationForm = () => {
             formData.append(index,fileAttachment);
         });
     }
-    const resetError=()=>{
-        setErrorsState([]);
-    }
 
     const register = () => {
 
@@ -118,32 +115,33 @@ const RegistrationForm = () => {
     }
 
     return (
-        <div className="container" style={{"marginTop": "5em", "maxWidth": "40em"}}>
-            
-            <h1>Here You Are Sherlocked</h1>
+        <div className="container" style={{"marginTop": "5em", "maxWidth": "40em","fontFamily":"cursive"}}>
+            <img style ={{"width":"100px", "height":"100px"}} src="./CaptureLogo.png"/>
+            <br/><br/>
+            <h1>READY TO BE SHERLOCKED !</h1>
             <br/>
 
             <label>First Name *</label>
-            <input ref={(element)=>{ firstNameField =  element}} onClick={resetError} className="field form-control" name="firstName" type="text" />
-
-            <label>Last Name*</label>
-            <input ref={(element)=>{ lastNameField =  element}} onClick={resetError} className="field form-control" name="lastName" type="text" />
-
+            <input ref={(element)=>{ firstNameField =  element}} className="field form-control" name="firstName" type="text" />
+            <br/>
+            <label>Last Name *</label>
+            <input ref={(element)=>{ lastNameField =  element}} className="field form-control" name="lastName" type="text" />
+            <br/>
             <label>Email Id *</label>
-            <input ref={(element)=>{ emailField =  element}} onClick={resetError} className="field form-control" name="email" type="text" />
-
-            <label>Password*</label>
-            <input ref={(element)=>{ passwordField =  element}} onClick={resetError} className="field form-control" name="password" autocomplete="off" type="password" />
-
+            <input ref={(element)=>{ emailField =  element}} className="field form-control" name="email" type="text" />
+            <br/>
+            <label>Password *</label>
+            <input ref={(element)=>{ passwordField =  element}} className="field form-control" name="password" autocomplete="off" type="password" />
+            <br/>
           
 
             <label>Upload Profile Picture</label>
             <input ref={(element)=>{ avatarInput = element}}  onChange={attachFile} className="field form-control" id="photo" name="file" type="file" multiple="multiple"/>
 
-            <br/><br/>
+            <br/>
 
-            <label>Do You Agree To Terms &amp; Conditions? *</label>
-            <input ref={(element)=>termsAndConditionsCheckbox = element} onClick={resetError} className="checkbox" name="termsConditions" type="checkbox" /> Yes
+            <label>Do You Agree To Terms &amp; Conditions? * </label>
+            <input ref={(element)=>termsAndConditionsCheckbox = element} className="checkbox" name="termsConditions" type="checkbox" /> Yes
 
             <br/><br/>
 
@@ -153,8 +151,7 @@ const RegistrationForm = () => {
                     <button 
                     onClick={register}
                     className="btn btn-primary"
-                    style={{"padding": "10px", "font-size": "16px"}}>
-                        Register
+                    style={{"padding": "10px", "font-size": "16px"}}><img style ={{"width":"50px", "height":"50px" ,"paddingRight":"20","paddingLeft":"20"}} src="./icons8-save-64.png"/>Register
                     </button><br/><br/>
                 </div>
             }

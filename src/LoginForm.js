@@ -36,7 +36,7 @@ function LoginForm() {
         if(validateEmail(emailField.value)=== false) {
             errors.push("Please enter a valid email address");
         }
-        if(validatePassword(passwordField.value) === false) {
+        if(passwordField.value.length === 0) {
             errors.push("Please enter a valid password");
         }
 
@@ -83,7 +83,7 @@ function LoginForm() {
     return (
         <div className="container" style={{maxWidth: 600, minHeight: 'calc(100vh - 112px)'}}>
 
-            <h1 className="py-5">Login-Sherlockians</h1>
+            <h1 className="py-5">Login-Sherlockians <img style ={{"width":"100px", "height":"100px"}} src="./CaptureLogo.png"/></h1>
 
             <div className="mb-3">
                 <label for="email" className="form-label">Email address</label>
@@ -100,7 +100,7 @@ function LoginForm() {
                 state !== "sending" && state !== "successful" &&
                 <button 
                 onClick={login}
-                className="btn btn-primary mb-3" type="button">Submit</button>
+                className="btn btn-primary mb-3" type="button"><img style ={{"width":"50px", "height":"50px" ,"paddingRight":"20","paddingLeft":"20"}} src="./icons8-submit-resume-30.png"/>Login</button>
             }
 
             { 

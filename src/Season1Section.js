@@ -20,8 +20,8 @@ const episodeDetails=[
 ]
 function Season1Section(){
     return(
-        <div>
-            <h1>Season 1</h1>
+        <div style={{"fontFamily":"cursive"}}>
+            <h1 className="text-center" style={{"color":"gray"}}>SEASON - 1 (2010)</h1>
             <MediaSection content={episodeDetails}/>
         </div>
     );

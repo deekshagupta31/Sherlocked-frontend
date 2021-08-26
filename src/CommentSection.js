@@ -42,7 +42,6 @@ function CommentSection(){
                     console.log(backendResponse);
                     if(backendResponse.status === "successful") {
                     setState("successful");
-                    commentField.value="";
                     }
                     else{
                         setState("unsuccessful");
@@ -57,12 +56,9 @@ function CommentSection(){
             )
             // 2.2 If the submission is successful, set state to "unsucessful"
         }       
-    };
-    const afterSuccess=()=>{  
-        commentField.value = "";
-    }
+    };    
     return(
-        <div className="px-10 py-10 mx-10 my-10">
+        <div className="px-10 py-10 mx-10 my-10"  style={{"padding": "10px", "font-size": "16px"}}>
             <div className="row g-2 ">
             <div className="col-md">
                 <div className="form-floating">
@@ -89,14 +85,15 @@ function CommentSection(){
                 </div>
             </div>  
             </div>
+            <br/>
             <div>
             {
                 state !== "submitting" &&
                 <div>
                     <button 
                     onClick={onClickForComment}
-                    className="btn btn-primary"
-                    style={{"padding": "10px", "font-size": "16px"}}>
+                    className="btn btn-outline-danger"
+                    style={{"padding": "10px", "font-size": "16px"}}><img style ={{"width":"50px", "height":"50px"}} src="./icons8-comments-50.png"/>
                         Submit
                     </button><br/><br/>
                 </div>
@@ -122,9 +119,8 @@ function CommentSection(){
                   <div className="alert alert-success">An error occured. Please try again.</div>
             }
             {
-                state === "successful" &&
-                afterSuccess &&
-                <div className="alert alert-success">You have a successfully created an account</div>
+                state === "successful"  &&
+                <div className="alert alert-success">Thanks ! Hope Sherlock Likes The Comments</div>
             }
 
             {
@@ -135,4 +131,4 @@ function CommentSection(){
         </div>
     );
 }
-export default CommentSection
+export default CommentSection;
