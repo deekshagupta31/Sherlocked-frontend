@@ -17,7 +17,7 @@ function MainScreen() {
                <p className="lead expandstyple">Created By-Mark Gatiss , Steven Moffat<br/>Starring -Benedict Cumberbatch ,Martin Freeman </p>       
           </div>
            <div className="mb-2">
-            <p className="lead" >Based on	Sherlock Holmes by <a href="https://en.wikipedia.org/wiki/Arthur_Conan_Doyle"> Sir Arthur Conan Doyle</a> 
+            <p className="lead" >Based on	Sherlock Holmes by <a href="https://en.wikipedia.org/wiki/Arthur_Conan_Doyle" target="_blank+9+"> Sir Arthur Conan Doyle</a> 
             </p>
         </div>
         <br/>
@@ -41,7 +41,7 @@ function MainScreen() {
        
             <div className="d-grid gap-2 d-sm-flex justify-content-sm-center px-3 mx-3">
                     <ReactLink className="btn btn-outline-primary btn-lg px-4 gap-3" to="/register"><img style ={{"width":"50px", "height":"50px"}} src="./icons8-check.gif"/>  Register</ReactLink>
-                    <ReactLink className="btn btn-outline-primary btn-lg px-4" to="/login"><img style ={{"width":"50px", "height":"50px"}} src="./icons8-lock (3).gif"/> Sign In</ReactLink>
+                    <ReactLink className="btn btn-outline-primary btn-lg px-4" to="/login"><img style ={{"width":"50px", "height":"50px"}} src="./icons8-lock (3).gif"/> Log In</ReactLink>
                 </div>
                 
           
