@@ -11,7 +11,7 @@ function CommentSection(){
     let commentField;   
     const onClickForComment=()=>{
         const errors=[];
-        if(selectedSeasonField.value.length===0){
+        if(selectedSeasonField.value.length===0 || selectedSeasonField.value==="Select"){
             errors.push("Please select season and episode");
         }
         if(commentField.value.length===0){
@@ -25,7 +25,8 @@ function CommentSection(){
             setState("submitting");
             setErrorsState([]);
             formData.append('seasonDetail', selectedSeasonField.value);
-            formData.append('comment', commentField.value.trim);
+            formData.append('comment', commentField.value
+            );
             formData.append('email', email);
             fetch(
                 `${process.env.REACT_APP_BACKEND}/userscomment/create`,
